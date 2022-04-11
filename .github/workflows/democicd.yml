@@ -3,11 +3,15 @@ name: Demo CI CD
 on:
   push:
     branches: [ master ]
-
+defaults:
+  run:
+    working-directory: /var/www/democicd
 jobs:
+
   build:
 
     runs-on: self-hosted
+    
 
     steps:
     - uses: actions/checkout@v2
