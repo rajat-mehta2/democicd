@@ -13,7 +13,9 @@ jobs:
 
     steps:
     - uses: actions/checkout@v3
-    - name: Push file from local to server
+    - name: Navigate to directory
     - run:  cd /var/www/democicd
+    - name: Pull files from git
     - run:  git pull origin master
+    - name: Check status
     - run:  git status
