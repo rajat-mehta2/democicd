@@ -14,8 +14,8 @@ jobs:
     steps:
     - uses: actions/checkout@v3
     - name: Navigate to directory
-    - run:  cd /var/www/democicd
+      run:  cd /var/www/democicd
     - name: Pull files from git
-    - run:  git pull origin master
+      run:  git pull origin master
     - name: Check status
-    - run:  git status
+      run:  git status
