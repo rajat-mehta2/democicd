@@ -12,10 +12,5 @@ jobs:
     runs-on: self-hosted
 
     steps:
-    - uses: actions/checkout@v3
-    - name: Navigate to directory
-      run:  cd /var/www/democicd
-    - name: Pull files from git
-      run:  git pull origin master
-    - name: Check status
-      run:  git status
+    - uses: actions/checkout@v2
+   
