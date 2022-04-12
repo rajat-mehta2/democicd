@@ -5,11 +5,9 @@ on:
     branches: [ master ]
   pull_request:
     branches: [ master ]
-    
-defaults:
-  run:
-    working-directory: '/var/www/democicd'
-    
+    paths:
+      - '/var/www/democicd'
+      
 jobs:
   build:
     runs-on: self-hosted
