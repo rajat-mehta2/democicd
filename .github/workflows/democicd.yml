@@ -8,8 +8,8 @@ on:
 
 jobs:
   build:
-    runs-on: ubuntu-latest
+    runs-on: self-hosted
+    env:
+      BUILD_FOLDER: /var/www/democicd
     steps:
       - uses: actions/checkout@v2
-        with:
-          path: '/var/www/democicd'
