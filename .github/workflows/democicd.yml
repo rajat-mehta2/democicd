@@ -1,18 +1,18 @@
 name: Demo CI CD
 
+defaults:
+  run:
+    working-directory: /var/www/democicd
+
 on:
   push:
     branches: [ master ]
   pull_request:
     branches: [ master ]
     
-defaults:
-  run:
-    working-directory: /var/www/democicd
-    
 jobs:
   build:
-    runs-on: ubuntu-latest
+    runs-on: self-hosted
       
     steps:
       - uses: actions/checkout@v2
