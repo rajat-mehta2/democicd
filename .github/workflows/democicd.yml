@@ -1,14 +1,14 @@
 name: Demo CI CD
 
-defaults:
-  run:
-    working-directory: /var/www/democicd
-
 on:
   push:
     branches: [ master ]
   pull_request:
     branches: [ master ]
+    
+defaults:
+  run:
+    working-directory: democicd
     
 jobs:
   build:
