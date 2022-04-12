@@ -5,12 +5,14 @@ on:
     branches: [ master ]
   pull_request:
     branches: [ master ]
-
+    
+defaults:
+  run:
+    working-directory: /var/www/democicd
+    
 jobs:
   build:
     runs-on: self-hosted
-    env:
-      BUILD_FOLDER: /var/www/democicd
-      Working directory: /var/www/democicd
+      
     steps:
       - uses: actions/checkout@v2
